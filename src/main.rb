@@ -1,13 +1,12 @@
 require_relative './methods.rb'
-require 'colorize'
+require 'colorized_string'
 require "tty-prompt"
 require 'lolize'
+require 'colorize'  
+colorizer = Lolize::Colorizer.new 
 
-
-colorizer = Lolize::Colorizer.new
 
 prompt = TTY::Prompt.new
-
 
 puts "Welcome to the virtual Chatterbox"
 puts "You have already chosen wisely by opening this app."
@@ -23,26 +22,25 @@ puts "You have already chosen wisely by opening this app."
     
     case input
     when 1
-        puts "You have selected to Play".blue
+        puts "You have selected to Play".colorize(:blue)
         colours = {"Aqua": 1, "Magenta":2, "Yellow": 3, "Emerald": 4}
         colour_choice = prompt.select("Pick a colour:", colours)
         puts "You have selected #{colours.key(colour_choice)}"
 
+
         letters = colours.key(colour_choice).to_s.upcase.split('')
         # letters.each { |l| puts l}
         
-                # Colorize isn't working
-        # def letter_colour
+                # Colorize isn't working - properly
             if letters == "Aqua"
-                letters.each.to_s { |l| puts l.cyan}
+                letters.each { |l| puts l.colorize(:cyan)}
             elsif letters == "Magenta"
-                letters.each.to_s { |l| puts l.magenta}
+                letters.each { |l| puts l.colorize(:magenta)}
             elsif letters == "Yellow"
-                letters.each.to_s { |l| puts l.yellow}
+                letters.each { |l| puts l.colorize(:yellow)}
             else
-                letters.each.to_s { |l| puts l.green}
+                letters.each { |l| puts l.colorize(:green)}
             end
-        # end
 
         number_choice1 = prompt.select("Pick a number:", random_numbers)
         puts "#{number_choice1} bonjours for you!"
