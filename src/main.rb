@@ -1,16 +1,18 @@
-require "colorize"
+require_relative './methods.rb'
+require 'colorize'
 require "tty-prompt"
 require 'lolize'
+
 
 colorizer = Lolize::Colorizer.new
 
 prompt = TTY::Prompt.new
 
-#BASIC MENU SYSTEM
+
 puts "Welcome to the virtual Chatterbox"
 puts "You have already chosen wisely by opening this app."
     
-    # puts "Pick 1) to start game, Pick 2) for the Christmas Edition, Pick 3) to find out what is Chatterbox, Pick 4) to exit"
+#BASIC MENU SYSTEM
     choices = { "Start game": 1, 
                 "Christmas Edition": 2, 
                 "What is Chatterbox?": 3, 
@@ -21,53 +23,48 @@ puts "You have already chosen wisely by opening this app."
     
     case input
     when 1
-        puts "You have selected to Play".colorize(:blue)
+        puts "You have selected to Play".blue
         colours = {"Aqua": 1, "Magenta":2, "Yellow": 3, "Emerald": 4}
         colour_choice = prompt.select("Pick a colour:", colours)
         puts "You have selected #{colours.key(colour_choice)}"
 
         letters = colours.key(colour_choice).to_s.upcase.split('')
-        letters.each { |l| puts l}
-        def letter_colour
+        # letters.each { |l| puts l}
+        
+                # Colorize isn't working
+        # def letter_colour
             if letters == "Aqua"
-                puts letters.each { |l| puts l.colorize(:cyan)}
+                letters.each.to_s { |l| puts l.cyan}
             elsif letters == "Magenta"
-                puts letters.each { |l| puts l}.colorize(:magenta)
+                letters.each.to_s { |l| puts l.magenta}
             elsif letters == "Yellow"
-                puts letters.each { |l| puts l}.colorize(:yellow)
+                letters.each.to_s { |l| puts l.yellow}
             else
-                puts letters.each { |l| puts l}.colorize(:green)
+                letters.each.to_s { |l| puts l.green}
+            end
+        # end
+
+        number_choice1 = prompt.select("Pick a number:", random_numbers)
+        puts "#{number_choice1} bonjours for you!"
+        puts "You have selected #{number_choice1}"
+        
+        # Loops through from 1 to number selected. Acts as count actions in game
+
+        i = 1
+        loop do
+            puts i
+                i += 1
+            
+            if i == number_choice1 + 1
+                break       
             end
         end
 
-        numbers2 = {1 => 1, 
-                    3 => 2, 
-                    5 => 3, 
-                    7 => 4}
-        number_choice2 = prompt.select("Pick a number:", numbers2)
-        puts "#{numbers2.key(number_choice2)} bonjours for you!"
-        puts "You have selected #{numbers2.key(number_choice2)}"
-        
-        # Loops through from 1 to number selected. Acts as count in game
-        i = 0
-        loop do
-        i += 1
-            puts i
-        if i == numbers2.key(number_choice2)
-            break       
-        end
-        end
-        
-        
-        numbers1 = {2 => 2, 
-                    4 => 4, 
-                    6 => 6, 
-                    8 => 8}
-        number_choice1 = prompt.select("Pick a number:", numbers1)
-        puts number_choice1
-        puts "You have selected #{numbers1.key(number_choice1)}"
+        number_choice2 = prompt.select("Pick a number:", random_numbers)
+        puts number_choice2
+        puts "You have selected #{number_choice2}"
 
-        case number_choice1
+        case number_choice2
 
         when 1
             colorizer.write "If you eat something and nobody sees you eat it, it has no calories."
@@ -101,3 +98,6 @@ puts "You have already chosen wisely by opening this app."
     else
         puts "Please pick 1, 2, 3 or 4".colorize(:red)
     end
+
+
+    
