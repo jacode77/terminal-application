@@ -22,26 +22,25 @@ puts "You have already chosen wisely by opening this app."
     
     case input
     when 1
-        puts "You have selected to Play".colorize(:blue)
+        puts "You have selected to Play".colorize(:magenta)
         colours = {"Aqua": 1, "Magenta":2, "Yellow": 3, "Emerald": 4}
         colour_choice = prompt.select("Pick a colour:", colours)
         puts "You have selected #{colours.key(colour_choice)}"
 
+        # Assigns key names as an uppercase string to the variable letters
+        letters = colours.key(colour_choice).to_s.upcase
 
-        letters = colours.key(colour_choice).to_s.upcase.split('')
-        # letters.each { |l| puts l}
-        
-                # Colorize isn't working - properly
-            if letters == "Aqua"
-                letters.each { |l| puts l.colorize(:cyan)}
-            elsif letters == "Magenta"
-                letters.each { |l| puts l.colorize(:magenta)}
-            elsif letters == "Yellow"
-                letters.each { |l| puts l.colorize(:yellow)}
+        # loops through the colour selected, printing each letter on a separate line in its colour
+            if letters == "AQUA"
+                letters.split('').each { |l| puts l.colorize(:cyan)}
+            elsif letters == "MAGENTA"
+                letters.split('').each { |l| puts l.colorize(:magenta)}
+            elsif letters == "YELLOW"
+                letters.split('').each { |l| puts l.colorize(:yellow)}
             else
-                letters.each { |l| puts l.colorize(:green)}
+                letters.split('').each { |l| puts l.colorize(:green)}
             end
-
+           
         number_choice1 = prompt.select("Pick a number:", random_numbers)
         puts "#{number_choice1} bonjours for you!"
         puts "You have selected #{number_choice1}"
