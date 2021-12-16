@@ -49,3 +49,10 @@ The following diagram shows the workflow of the app
 ### Implementation Plan
 
 ### Help Documentation
+
+
+### References
+
+Anne-Marie, 2019, "A Centuries Olf Favourite: The Chatterbox", Kids WantU, Viewed 16 December 2021, <https://kidswantu.com/2019/09/24/centuries-old-favourite-chatterbox/>
+
+ASCII Art Website, nd, Viewed 16 December 2021, <https://asciiart.website/index.php?art=holiday/christmas/santa>
