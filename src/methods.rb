@@ -66,7 +66,33 @@ def what_is_ascii
   puts File.read('./what-is-ascii.txt')
 end
 
-# prints text
+# prints text in What is Chatterbox menu item
 def how_to
   puts File.read('./what-is.txt')
 end
+# prints santa with joke
+def santa_ascii
+  puts File.read('./santa.txt')
+end
+
+def jokes(number_choice2, rainbow)
+  case number_choice2
+  when 1
+    rainbow.write "Why was the snowman looking through the carrots?\nBecause he was picking his nose"
+  when 2
+    rainbow.write "What do you call buying a piano for the holidays?\nChristmas Chopin"
+  when 3
+    rainbow.write "Why was the turkey in the pop group?\nBecause he was the only one with drumsticks!"
+  when 4
+    rainbow.write "What happens to elves when they are naughty?\nSanta gives them the sack!"
+  when 5
+    rainbow.write "What happened to the man that stole an advent calendar?\nHe got 25 days."
+  when 6
+    rainbow.write "How is Drake like an elf?\nHe spends all his time wrapping."
+  when 7
+    rainbow.write "What do you call a reindeer who can't see?\nNo-eye deer."
+  else
+    rainbow.write "What did Santa do when he went speed dating?\n He pulled a cracker."
+  end
+end
+  

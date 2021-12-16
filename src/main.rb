@@ -45,6 +45,26 @@ when 1
   fortune(number_choice2, rainbow)
 when 2
   puts 'You have opted for the Christmas Edition'.colorize(:green)
+  system "clear"
+
+  characters = { 'Santa': 1, 'Rudolph': 2, 'Christmas Elf': 3, 'Grinch': 4 }
+  character_choice = prompt.select('Pick a character:', characters)
+  puts "You have selected #{characters.key(character_choice)}"
+
+  # Assigns key names as an uppercase string to the variable letters
+  letters = characters.key(character_choice).to_s.upcase
+  system "clear"
+  spell_l(letters)
+
+  number_choice1 = prompt.select('Pick a number:', random_numbers)
+  system "clear"
+  puts "You have selected #{number_choice1}"
+  count_nums(number_choice1)
+
+  number_choice2 = prompt.select('Pick another number:', random_numbers)
+  system "clear"
+  puts "#{santa_ascii}\nHo ho ho"
+  jokes(number_choice2, rainbow)
 when 3
     system "clear"
     what_is_ascii
