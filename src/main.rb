@@ -50,7 +50,7 @@ when 2
   # Assigns key names as an uppercase string to the variable letters
   letters = characters.key(character_choice).to_s.upcase
   system "clear"
-  spell_l(letters)
+  spell_c(letters)
   number_choice1 = prompt.select('Pick a number:', random_numbers)
   system "clear"
   puts "You have selected #{number_choice1}"

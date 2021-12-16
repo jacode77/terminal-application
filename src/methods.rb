@@ -3,7 +3,7 @@ require 'colorize'
 # prints banner in welcome page
 def banner_ascii
   begin
-    puts File.read('./banner.txt')
+    puts File.read('./data/banner.txt')
   rescue
     puts "Something unexpected happened to the image that should be here".colorize(:red)
   end
@@ -63,7 +63,7 @@ end
 
 def fortune_ascii_art
   begin
-    puts File.read('./chatterbox-ascii.txt')
+    puts File.read('./data/chatterbox-ascii.txt')
   rescue
     puts "Something unexpected happened to the image that should be here".colorize(:red)
   end
@@ -72,7 +72,7 @@ end
 # prints heading for chatterbox definition
 def what_is_ascii
   begin
-    puts File.read('./what-is-ascii.txt')
+    puts File.read('./data/what-is-ascii.txt')
   rescue
     puts "Something unexpected happened to the image that should be here".colorize(:red)
   end
@@ -81,15 +81,29 @@ end
 # prints text in What is Chatterbox menu item
 def how_to
   begin
-    puts File.read('./what-is.txt')
+    puts File.read('./data/what-is.txt')
   rescue
-    puts "Something unexpected happened to the image that should be here".colorize(:red)
+    puts "Something unexpected happened to the text that should be here".colorize(:red)
   end
 end
+
+  # Spells characters in alternate christmas themed colours
+  def spell_c(letters)
+    if letters == 'SANTA'
+      letters.split('').each { |c| puts c}
+    elsif letters == 'RUDOLPH'
+      letters.split('').each { |c| puts c.colorize(:red) }
+    elsif letters == 'CHRISTMAS ELF'
+      letters.split('').each { |c| puts c.colorize(:gray) }
+    else
+      letters.split('').each { |c| puts c.colorize(:green) }
+    end
+  end
+
 # prints santa with joke
 def santa_ascii
   begin
-    puts File.read('./santa.txt')
+    puts File.read('./data/santa.txt')
   rescue
     puts "Something unexpected happened to the image that should be here".colorize(:red)
   end
