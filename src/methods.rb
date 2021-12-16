@@ -60,3 +60,13 @@ end
 def fortune_ascii_art
   puts File.read('./chatterbox-ascii.txt')
 end
+
+# prints heading for chatterbox definition
+def what_is_ascii
+  puts File.read('./what-is-ascii.txt')
+end
+
+# prints text
+def how_to
+  puts File.read('./what-is.txt')
+end
