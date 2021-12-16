@@ -2,7 +2,11 @@ require 'colorize'
 
 # prints banner in welcome page
 def banner_ascii
-  puts File.read('./banner.txt')
+  begin
+    puts File.read('./banner.txt')
+  rescue
+    puts "Something unexpected happened to the image that should be here".colorize(:red)
+  end
 end
 
 # returns an array of 4 random numbers from 1-8
@@ -58,21 +62,37 @@ def fortune(number_choice2, rainbow)
 end
 
 def fortune_ascii_art
-  puts File.read('./chatterbox-ascii.txt')
+  begin
+    puts File.read('./chatterbox-ascii.txt')
+  rescue
+    puts "Something unexpected happened to the image that should be here".colorize(:red)
+  end
 end
 
 # prints heading for chatterbox definition
 def what_is_ascii
-  puts File.read('./what-is-ascii.txt')
+  begin
+    puts File.read('./what-is-ascii.txt')
+  rescue
+    puts "Something unexpected happened to the image that should be here".colorize(:red)
+  end
 end
 
 # prints text in What is Chatterbox menu item
 def how_to
-  puts File.read('./what-is.txt')
+  begin
+    puts File.read('./what-is.txt')
+  rescue
+    puts "Something unexpected happened to the image that should be here".colorize(:red)
+  end
 end
 # prints santa with joke
 def santa_ascii
-  puts File.read('./santa.txt')
+  begin
+    puts File.read('./santa.txt')
+  rescue
+    puts "Something unexpected happened to the image that should be here".colorize(:red)
+  end
 end
 
 def jokes(number_choice2, rainbow)
