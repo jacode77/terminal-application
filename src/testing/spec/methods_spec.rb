@@ -27,16 +27,3 @@ describe 'exit_option' do
     it "should exit game after menu with 'ctrl c' without error" do
         expect()
 end
-
-
-
-class Game
-    def initialize(menu)
-      @menu = menu
-      @choices = choices
-    end
-    def initialize(name)
-      @name = name
-      @names_array = ["Alice", "Bob", "Charlie", "Danny", "Ellen", "Fiona", "Helmut"]
-  end
-  end

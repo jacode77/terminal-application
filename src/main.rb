@@ -1,6 +1,5 @@
 require_relative './methods.rb'
-# require_relative './what-is.rb'
-# require 'colorized_string'
+# require_relative './classes/menu.rb'
 require 'tty-prompt'
 require 'lolize'
 require 'colorize'
@@ -10,7 +9,7 @@ prompt = TTY::Prompt.new(interrupt: :exit)
 
 puts "#{banner_ascii}\nWelcome to the virtual Chatterbox\nYou have already chosen wisely by opening this app."
 
-#BASIC MENU SYSTEM
+# BASIC MENU SYSTEM
 
 choices = {
   'Start game': 1,
@@ -20,6 +19,8 @@ choices = {
 }
 input = prompt.select('Select an option to start', choices)
 puts input
+
+# puts main_menu()
 
 case input
 when 1
