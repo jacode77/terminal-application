@@ -5,7 +5,8 @@ require 'tty-prompt'
 require 'lolize'
 require 'colorize'
 rainbow = Lolize::Colorizer.new
-prompt = TTY::Prompt.new
+prompt = TTY::Prompt.new(interrupt: :exit)
+
 
 puts "#{banner_ascii}\nWelcome to the virtual Chatterbox\nYou have already chosen wisely by opening this app."
 
