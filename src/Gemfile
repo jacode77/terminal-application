@@ -12,6 +12,4 @@ gem 'tty-prompt'
 
 gem 'lolize'
 
-gem 'prettier'
-
 gem "rspec", "~> 3.10"

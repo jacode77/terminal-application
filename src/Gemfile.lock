@@ -8,7 +8,6 @@ GEM
     paint (0.8.7)
     pastel (0.8.0)
       tty-color (~> 0.5)
-    prettier (2.0.0)
     rspec (3.10.0)
       rspec-core (~> 3.10.0)
       rspec-expectations (~> 3.10.0)
@@ -40,7 +39,6 @@ PLATFORMS
 DEPENDENCIES
   colorize (~> 0.8.1)
   lolize
-  prettier
   rspec (~> 3.10)
   tty-prompt
 

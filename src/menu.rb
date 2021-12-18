@@ -11,15 +11,13 @@ def main_menu
     # BASIC MENU SYSTEM
     
     choices = {
-      'Start game': 1,
+      'Start Game': 1,
       'Christmas Edition': 2,
       'What is Chatterbox?': 3,
       'Quit': 4
       }
     input = prompt.select('Select an option to start', choices)
     puts input
-    
-    # puts main_menu()
     
     case input
 
