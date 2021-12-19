@@ -27,7 +27,9 @@ class Game
     end
 
     def welcome
-        puts "#{banner_ascii}\nWelcome to the virtual Chatterbox\nYou have already chosen wisely by opening this app."
+            puts "Please enter your name:"
+            name = gets.chomp
+            puts "#{banner_ascii}\nHi #{name}, Welcome to Chatterbox\nYou have already chosen wisely by opening this app." 
     end
 
     def menu

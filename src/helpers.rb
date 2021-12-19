@@ -1,9 +1,22 @@
 require 'colorize'
 
+# def name_input
+#   puts "Please enter your name:"
+#   name = gets.chomp
+#   begin
+   
+#   rescue puts "No input. Please tell us your first name." if name.empty? || name.nil?
+#   retry
+#   end
+# end
+# end
+
+
+
 # prints banner in welcome page
 def banner_ascii
   begin
-    puts File.read('./data/banner.txt')
+    File.foreach('./data/banner.txt') {|line| puts line}
   rescue SystemCallError => e
     puts "Something unexpected happened to the image that should be here. You can look into it here: #{e.inspect}".colorize(:red)
   end
