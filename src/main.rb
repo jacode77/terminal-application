@@ -1,3 +1,4 @@
-require_relative 'menu.rb'
+require_relative './classes/game.rb'
 
-main_menu()
+chatterbox = Game.new
+chatterbox.run()
