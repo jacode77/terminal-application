@@ -1,18 +1,5 @@
 require 'colorize'
 
-# def name_input
-#   puts "Please enter your name:"
-#   name = gets.chomp
-#   begin
-   
-#   rescue puts "No input. Please tell us your first name." if name.empty? || name.nil?
-#   retry
-#   end
-# end
-# end
-
-
-
 # prints banner in welcome page
 def banner_ascii
   begin
@@ -48,7 +35,6 @@ def count_nums(number_choice1)
   loop do
     puts i
     i += 1
-
     break if i == number_choice1 + 1
   end
 end
@@ -103,7 +89,7 @@ end
   # Spells characters in alternate christmas themed colours
   def spell_c(letters)
     if letters == 'SANTA'
-      letters.split('').each { |c| puts c}
+      letters.split('').each { |c| puts c }
     elsif letters == 'RUDOLPH'
       letters.split('').each { |c| puts c.colorize(:red) }
     elsif letters == 'CHRISTMAS ELF'
@@ -142,4 +128,3 @@ def jokes(number_choice2, rainbow)
     rainbow.write "What did Santa do when he went speed dating?\n He pulled a cracker.\n"
   end
 end
-  

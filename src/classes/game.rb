@@ -1,4 +1,5 @@
 require_relative '../helpers.rb'
+require_relative './help/help_file.rb'
 require 'tty-prompt'
 require 'colorize'
 require 'lolize'
@@ -11,6 +12,21 @@ class Game
         @rainbow = Lolize::Colorizer.new
     end
     
+    puts "Hello there!"
+    if ARGV.length > 0
+        flag, *rest = ARGV
+        ARGV.clear
+        case flag
+        when '-help'
+            puts "For help, please refer to chatterbox README.md or after entering your name, select in menu option 'What is Chatterbox?'"
+            exit
+        when '-info'
+            puts "This program is running #{RUBY_VERSION}"
+        else 
+            puts "Invalid argument, see the readme for options"
+        end
+    end    
+
     def run
         welcome()
         selected = menu()
@@ -40,9 +56,7 @@ class Game
             'Quit': 4
             }
         input = @prompt.select('Select an option to start', choices)
-        return input
-
-        
+        return input   
     end
 
     def standard_game
@@ -85,7 +99,7 @@ class Game
         number_choice2 = @prompt.select('Pick another number:', random_numbers)
         system "clear"
 
-        puts "#{santa_ascii}\nHo ho ho"
+        puts "#{santa_ascii}\nHo Ho Ho"
         jokes(number_choice2, @rainbow)
     end
 
@@ -94,7 +108,7 @@ class Game
         what_is_ascii
         puts 'You seek further understanding of what is Chatterbox...'.colorize(:green)
         how_to
-        input = @prompt.select('Press enter to return to Main Menu', {'Return to Main Menu': 1})
+        input = @prompt.select('Press enter to return to Main Menu', { 'Return to Main Menu': 1 })
         menu
     end
 end

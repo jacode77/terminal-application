@@ -2,6 +2,8 @@
 
 The Chatterbox app is a simple command line game that simulates the traditional Chatterbox game. The game currently has a Standard and Christmas edition, which provide a fortune and a Christmas joke respectively, based on user input.
 
+Please note, this application is best viewed in a terminal of 108 x 31 or full screen.
+
 A link to the repository in GitHub can be located [here](https://github.com/jacode77/terminal-application.git).
 
 ### Purpose and scope of the your application
@@ -36,7 +38,7 @@ The game includes the following features:
 
 - **Use of Menus** - The use of menus simplifies the way the user interacts with the game creating an overall smoother user experience. The menus have been created through the use of the _TTY-prompt_ gem. It is a select menu that allows the user to make a selection, which in turn reduces the amount of text, particularly if the user just wants to play the game and errors.
 
-- **User Input & Output** - Throughout the game the user is prompted for input through the use of the multi-select menu option, also using _TTY-prompt_. This feature is different to the welcome menu in that each selection is each linked to the code. The user choice is confirmed by displaying the output and continues the game based on their input. The overall *fortune* is the output based onthe overall user input.
+- **User Input & Output** - Throughout the game the user is prompted for input through the use of the multi-select menu option, also using _TTY-prompt_. This feature is different to the welcome menu in that each selection is each linked to the code. The user choice is confirmed by displaying the output and continues the game based on their input. The overall *fortune* is the output based on the overall user input.
 
 - **Use of Coloured Text** - A standard terminal will normally display in black and white. As the game cannot simulate the actions of the actual game, and to be more engaging, the _Colorize_ gem has been implemented as a feature to display the user colour choice. For example, if the user selects _Magenta_ as their colour choice, the output is confirmed as the colour selected and spelt out in this same colour. The use of *Lolize* has also been implemented to print the fortune output.
 
@@ -60,6 +62,9 @@ The game includes the following features:
 
 #### How errors will be handled by the application and displayed to the user
 
+The game handles errors if there are broken file links. These are common errors and are therefore expected exceptions. *Begin and rescue* blocks have been included in the app to remedy this and ensure the user/game is not disrupted. An error message will print in red to notify the user if any linked `.txt` files break.
+
+As the game is fairly basic, there has not been a great need for further error handlers
 
 ### App Diagram
 
@@ -68,11 +73,18 @@ The following diagram shows the workflow of the app
 
 ### Implementation Plan
 
+As this is the first app I have created the implementation plan has evolved as the project has. Initially the plan did not contain many items in the 'to do' list of each planned item due to misunderstanding, however was corrected towards the end of the project.
+
+A couple of items remain in the *Backlog* as stretch goals to implement at a later stage.
+
+A log of the implementation plan can be seen in screenshots below, with the final update in the link [here](https://trello.com/b/mSjdsPCu/terminal-app).
+
+
 ### Help Documentation
 
 
 ### References
 
-Anne-Marie, 2019, "A Centuries Olf Favourite: The Chatterbox", Kids WantU, Viewed 16 December 2021, <https://kidswantu.com/2019/09/24/centuries-old-favourite-chatterbox/>
+Anne-Marie, 2019, "A Centuries Old Favourite: The Chatterbox", Kids WantU, Viewed 16 December 2021, <https://kidswantu.com/2019/09/24/centuries-old-favourite-chatterbox/>
 
 ASCII Art Website, nd, Viewed 16 December 2021, <https://asciiart.website/index.php?art=holiday/christmas/santa>
