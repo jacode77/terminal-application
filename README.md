@@ -75,10 +75,27 @@ The following diagram shows the workflow of the app
 
 As this is the first app I have created the implementation plan has evolved as the project has. Initially the plan did not contain many items in the 'to do' list of each planned item due to misunderstanding, however was corrected towards the end of the project.
 
-A couple of items remain in the *Backlog* as stretch goals to implement at a later stage.
+One item remain in the *Backlog* as stretch goals to implement at a later stage.
 
 A log of the implementation plan can be seen in screenshots below, with the final update in the link [here](https://trello.com/b/mSjdsPCu/terminal-app).
 
+Progress from 14th December
+![14th December](./docs/14dec.png)
+
+Progress from 15th December
+![15th December](./docs/15dec.png)
+
+Progress from 16th December
+![16th December](./docs/16dec.png)
+
+Progress from 18th December
+![18th December](./docs/18dec.png)
+
+Progress from 19th December
+![19th December](./docs/19dec.png)
+
+Progress from 20th December
+![20th December](./docs/20dec.png)
 
 ### Help Documentation
 
