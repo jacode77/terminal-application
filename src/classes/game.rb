@@ -22,10 +22,15 @@ class Game
     def initialize
         @prompt = TTY::Prompt.new(interrupt: :exit)
         @rainbow = Lolize::Colorizer.new
+        @was_welcomed = false
     end  
 
     def run
-        welcome()
+        if @was_welcomed == false
+            welcome()
+            @was_welcomed = true
+        end
+
         selected = menu()
         case selected
         when 1
@@ -62,7 +67,7 @@ class Game
             'Quit': 4
             }
         input = @prompt.select('Select an option to start', choices)
-        return input   
+        return input
     end
 
     def standard_game
@@ -115,6 +120,6 @@ class Game
         puts 'You seek further understanding of what is Chatterbox...'.colorize(:green)
         how_to
         input = @prompt.select('Press enter to return to Main Menu', { 'Return to Main Menu': 1 })
-        menu
+        run()
     end
 end
