@@ -64,7 +64,7 @@ The game includes the following features:
 
 The game handles errors if there are broken file links. These are common errors and are therefore expected exceptions. *Begin and rescue* blocks have been included in the app to remedy this and ensure the user/game is not disrupted. An error message will print in red to notify the user if any linked `.txt` files break.
 
-As the game is fairly basic, there has not been a great need for further error handlers
+As the game is fairly basic, there has not been a great need for further error handlers.
 
 ### App Diagram
 
@@ -73,7 +73,7 @@ The following diagram shows the workflow of the app
 
 ### Implementation Plan
 
-As this is the first app I have created the implementation plan has evolved as the project has. Initially the plan did not contain many items in the 'to do' list of each planned item due to misunderstanding, however was corrected towards the end of the project.
+As this is the first programming app I have created the implementation plan has evolved along with the project. The use of *Trello* has been applied to assist with the overall implementation. Initially the plan did not contain many items in the 'to do' list of each Trello card due to misunderstanding, however was corrected towards the end of the project. All key items were able to be completed.
 
 One item remain in the *Backlog* as stretch goals to implement at a later stage.
 
@@ -99,6 +99,15 @@ Progress from 20th December
 
 ### Help Documentation
 
+In order to install this application the user will need to run the `bash` file - `run-chatterbox.sh`, located in the `src` folder. This file contains the installation checks and process for the necessary gems required. If the gems are already installed on the users computer it will notify the user by printing `true` for each gem. A `false` notification will result in the gem being installed.
+
+From there the user will be taken asked for their name and prompted to start the game. Alternatively, once in the `src` folder the user can simply run `main.rb` to execute the game from the terminal.
+
+This application has been built on Ruby version 3.0.2 and would be best run on this version to avoid compatibility issues. No additional hardware or system requirements are necessary for the app to run.
+
+Automation of the tests has been made available through the bash script `./test-runner.sh`. The user can review the tests report in the `test.log` located in the `test-documentation` folder.
+
+Further details on the gems used can be located in teh `Gemfile`, located in the `src` folder.
 
 ### References
 

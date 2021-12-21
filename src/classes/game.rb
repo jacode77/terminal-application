@@ -1,31 +1,28 @@
 require_relative '../helpers.rb'
-require_relative './help/help_file.rb'
 require 'tty-prompt'
 require 'colorize'
 require 'lolize'
 
+if ARGV.length > 0
+    flag, *rest = ARGV
+    ARGV.clear
+    case flag
+    when '-help'
+        puts "For help, please refer to the chatterbox README.md or after entering your name, select in menu option 'What is Chatterbox?'"
+        exit
+    when '-info'
+        puts "This program is running Ruby #{RUBY_VERSION}"
+    else 
+
+    end
+end
 
 class Game
 
     def initialize
         @prompt = TTY::Prompt.new(interrupt: :exit)
         @rainbow = Lolize::Colorizer.new
-    end
-    
-    puts "Hello there!"
-    if ARGV.length > 0
-        flag, *rest = ARGV
-        ARGV.clear
-        case flag
-        when '-help'
-            puts "For help, please refer to chatterbox README.md or after entering your name, select in menu option 'What is Chatterbox?'"
-            exit
-        when '-info'
-            puts "This program is running #{RUBY_VERSION}"
-        else 
-            puts "Invalid argument, see the readme for options"
-        end
-    end    
+    end  
 
     def run
         welcome()
@@ -43,9 +40,18 @@ class Game
     end
 
     def welcome
-            puts "Please enter your name:"
-            name = gets.chomp
-            puts "#{banner_ascii}\nHi #{name}, Welcome to Chatterbox\nYou have already chosen wisely by opening this app." 
+        loop do
+        puts "Please enter your name:"
+        name = gets.chomp
+
+            if name.empty? || name.nil?
+                puts "There was no name entered."
+                welcome
+            else
+                puts "#{banner_ascii}\nHi #{name}, Welcome to Chatterbox\nYou have already chosen wisely by opening this app." 
+            end
+            break
+        end
     end
 
     def menu

@@ -1,9 +1,8 @@
 require_relative 'helpers.rb'
+require_relative '../help/help_file.rb'
 require 'tty-prompt'
 require 'lolize'
 require 'colorize'
-
-
 
 
 def main_menu

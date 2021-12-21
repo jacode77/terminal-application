@@ -1,0 +1,25 @@
+
+Game
+  menu
+    should be defined
+
+random_numbers
+  should return four random numbers from the array
+
+Finished in 0.00243 seconds (files took 0.26102 seconds to load)
+2 examples, 0 failures
+
+Tue 21 Dec 2021 11:53:46 +08
+
+Game
+  menu
+    should be defined
+
+random_numbers
+  should return four random numbers from the array
+  should not return ordered numbers
+
+Finished in 0.01002 seconds (files took 0.2299 seconds to load)
+3 examples, 0 failures
+
+Tue 21 Dec 2021 12:09:51 +08
