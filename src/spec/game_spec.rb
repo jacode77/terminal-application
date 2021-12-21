@@ -1,4 +1,3 @@
-# require_relative '../helpers.rb'
 require_relative '../helpers.rb'
 
 describe 'Game' do
