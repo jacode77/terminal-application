@@ -80,26 +80,38 @@ One item remain in the *Backlog* as stretch goals to implement at a later stage.
 A log of the implementation plan can be seen in screenshots below, with the final update in the link [here](https://trello.com/b/mSjdsPCu/terminal-app).
 
 Progress from 14th December
+
 ![14th December](./docs/14dec.png)
 
+
 Progress from 15th December
+
 ![15th December](./docs/15dec.png)
 
+
 Progress from 16th December
+
 ![16th December](./docs/16dec.png)
 
+
 Progress from 18th December
+
 ![18th December](./docs/18dec.png)
 
+
 Progress from 19th December
+
 ![19th December](./docs/19dec.png)
 
+
 Progress from 20th December
+
 ![20th December](./docs/20dec.png)
+
 
 ### Help Documentation
 
-In order to install this application the user will need to run the `bash` file - `run-chatterbox.sh`, located in the `src` folder. This file contains the installation checks and process for the necessary gems required. If the gems are already installed on the users computer it will notify the user by printing `true` for each gem. A `false` notification will result in the gem being installed.
+In order to install this application the user will need to run the `bash` file - `./run-chatterbox.sh`, located in the `src` folder. This file contains the installation checks and process for the necessary gems required. If the gems are already installed on the users computer it will notify the user by printing `true` for each gem. A `false` notification will result in the gem being installed.
 
 From there the user will be taken asked for their name and prompted to start the game. Alternatively, once in the `src` folder the user can simply run `main.rb` to execute the game from the terminal.
 
