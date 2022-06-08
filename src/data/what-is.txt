@@ -2,7 +2,7 @@
 What was once a childhood favourite has again been brought back to life in the form of a terminal game.
 
 
-Chatterbox is traditionally an origami style game that was intorduced to the western world in 1928. It was formally a fortune teller, however over has evolved and adapted to various types of games - subject to the creativity of the individual. Other names you may have heard include 'Salt Cellar', 'Cootie Catcher' or 'Fortune Teller'. The original game is played with specially folded paper (Origami), however the terminal game brings a different spin on the game. The game may have different themes, such as decision making, truth or dare or silly messages, however the steps follow a similar sequence:
+Chatterbox is traditionally an origami style game that was introduced to the western world in 1928. It was formally a fortune teller, however over has evolved and adapted to various types of games - subject to the creativity of the individual. Other names you may have heard include 'Salt Cellar', 'Cootie Catcher' or 'Fortune Teller'. The original game is played with specially folded paper (Origami), however the terminal game brings a different spin on the game. The game may have different themes, such as decision making, truth or dare or silly messages, however the steps follow a similar sequence:
 
 
 Step 1) Choose a colour from the menu
